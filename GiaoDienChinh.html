@@ -12,12 +12,12 @@
 </head>
 <body>
 
-	<div style="margin: 10px 150px 10px 150px">
+	<div class="container topbot10">
 		<form >
 			<img src="../images/logoKTYT.png" style="width:200px; vertical-align:top">	
 			<div style="float:right; font-size:15px;">
 				<div class="input-group ">
-					<input class="form-control " type="text" name="search" placeholder="Bạn cứ nhập từ khoá, còn lại để KTYT lo" style=" position:absolute; right: 100%; width: 450px">
+					<input class="form-control " type="text" name="search" placeholder="Bạn cứ nhập từ khoá, còn lại để KTYT lo" style=" position:absolute; right: 100%; width: 400px">
 					<div class="input-group-append">
 						<button class="btn btn-success" type="submit" style="font-size:16px; border-radius: 0px 5px 5px 0px;">Tìm kiếm</button>
 					</div>
@@ -27,15 +27,15 @@
 	</div>
 
 	<div class="navbarr">
-		<a href="GiaoDienChinh.html" class="tablinks"  style="margin-left: 150px">Trang chủ</a>
+		<a href="GiaoDienChinh.html" class="tablinks"  style="margin-left: 200px">Trang chủ</a>
 		<!-- onclick="openCity(event, 'TrangChu')" -->
 		<div class="subnav">
-			<button class="subnavbtn" onclick="myFunction()">Dấu hiệu bệnh</button>
+			<button href="#theloai" class="subnavbtn" onclick="myFunction()">Dấu hiệu bệnh</button>
 			<div id="myDropdown" class="subnav-content">
 				<input type="text" placeholder="Nhập dấu hiệu" id="myInput" onkeyup="filterFunction()" style="width:100%"><br>
 				<a href="#company">Đau đầu</a>
 				<a href="#company">Ù tai</a>
-				<a href="#company">Sưng vù</a>
+				<a href="#company">Sứng vù</a>
 				<a href="#company">Ngứa</a>
 				<a href="#company">Dị ứng</a>
 				<a href="#company">Đau bụng</a>
@@ -67,19 +67,14 @@
 		</div>
 
 		<!-- <a class="tablinks" onclick="openCity(event, 'TruyenHot')">Phòng bệnh</a> -->
-			
 		<a href="BenhThuongGap.html">Các bệnh thường gặp</a>
-		<a href="SoCuu.html">Sơ cứu</a>
-		<a href="NhanBietThaoDuoc.html">Nhận biết thảo dược</a>
-		<a href="KhoaHocYKhoa.html">Khóa học y khoa</a>
-		<a href="TinTuc.html">Tin tức</a>
+		<a href="SoCuu.html" onclick="openCity(event, 'SoCuu')">Sơ cứu</a>
+		<a href="NhanBietThaoDuoc.html" onclick="openCity(event, 'NhanBietThaoDuoc')">Nhận biết thảo dược</a>
+		<a href="KhoaHocYKhoa.html" onclick="openCity(event, 'KhoaHocYKhoa')">Khóa học y khoa</a>
+		<a href="TinTuc.html" onclick="openCity(event, 'TinTuc')">Tin tức</a>
 		<!-- <a href="#">Theo dõi</a> -->
 
-		
-
-		
-
-		<a class="openbtn" onclick="openNav()" style="float:right; margin-right:150px">Khác</a> 
+	<a class="openbtn" onclick="openNav()" style="float:right; margin-right:200px">Khác</a> 
 	</div>
 
 	<div id="mySidepanel" class="sidenav">
