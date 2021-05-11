@@ -181,7 +181,7 @@ input[type=text]:focus {
 
   .sidenav a:hover {
     color: #f1f1f1;
-    /*background-color: red;*/
+    background-color: #111111;
   }
 
   .sidenav .closebtn {

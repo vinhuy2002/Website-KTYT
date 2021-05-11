@@ -13,22 +13,19 @@
 </head>
 <body>
 	<div class="container topbot10">
-		<form >
-			<img src="images/logoKTYT.png" style="width:200px; vertical-align:top">	
-			<div style="float:right; font-size:15px;">
-				<div class="input-group ">
-					<input class="form-control " type="text" name="search" placeholder="Bạn cứ nhập từ khoá, còn lại để KTYT lo" style=" position:absolute; right: 100%; width: 400px">
-					<div class="input-group-append">
-						<button class="btn btn-success" type="submit" style="font-size:16px; border-radius: 0px 5px 5px 0px;">Tìm kiếm</button>
-					</div>
+		<img src="images/logoKTYT.png" style="width:200px; vertical-align:top">	
+		<div style="float:right; font-size:15px;">
+			<div class="input-group">
+				<input class="form-control " type="text" name="search" placeholder="Bạn cứ nhập từ khoá, còn lại để KTYT lo" style=" position:absolute; right: 100%; width: 400px">
+				<div class="input-group-append">
+					<button class="btn btn-success" type="submit" style="font-size:16px;">Tìm kiếm</button>
 				</div>
 			</div>
-		</form>
+		</div>
 	</div>
 
 	<div class="navbarr">
 		<a href="GiaoDienChinh.html" class="tablinks"  style="margin-left: 200px">Trang chủ</a>
-		<!-- onclick="openCity(event, 'TrangChu')" -->
 		<div class="subnav">
 			<button href="#theloai" class="subnavbtn" onclick="myFunction()">Dấu hiệu bệnh</button>
 			<div id="myDropdown" class="subnav-content">
@@ -74,18 +71,19 @@
 		<a href="TinTuc.html" onclick="openCity(event, 'TinTuc')">Tin tức</a>
 		<!-- <a href="#">Theo dõi</a> -->
 
-	<a class="openbtn" onclick="openNav()" style="float:right; margin-right:200px">Khác</a> 
+		<a class="openbtn" onclick="openNav()" style="float:right; margin-right:200px">Khác</a> 
+
+		<div id="mySidepanel" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding: 1px 13px 1px 13px;">×</a>
+			<a href="#">Fanpage</a>
+			<a href="#">Group</a>
+			<a href="#">Donate</a>
+			<a href="#">Trợ giúp</a>
+		</div>
+
+
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 	</div>
-
-	<div id="mySidepanel" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding: 1px 13px 1px 13px;">×</a>
-		<a href="#">Fanpage</a>
-		<a href="#">Group</a>
-		<a href="#">Donate</a>
-		<a href="#">Trợ giúp</a>
-	</div>
-
-
 
 
 	<div class="container trang">
@@ -159,44 +157,61 @@
 		        <h5 class="text-uppercase">Liên hệ</h5>
 		        <p><i class="fas fa-envelope"></i> kttyte_1@gmail.com</p>
 		        <p><i class="fas fa-phone-alt"></i> 0123456789</p>
+		    </div>
+			<hr class="clearfix w-100 d-md-none pb-3">
+				<div class="col-md-3 mb-md-0 mb-3">
+			        <h5 class="text-uppercase">Links</h5>
+			        <ul class="list-unstyled">
+				        <li>
+					    	<a href="#">Trang chủ</a>
+				        </li>
+				        <li>
+				        	<a href="#">Dấu hiệu bệnh</a>
+				        </li>
+				        <li>
+				        	<a href="#">Các bệnh thường gặp</a>
+				        </li>
+				        <li>
+				        	<a href="#">Sơ Cứu</a>
+				        </li>
+			        </ul>
+	        	</div>
+	 		    <div class="col-md-3 mb-md-0 mb-3">
+			        <ul class="list-unstyled">
+				        <li>
+				        	<a href="#">Nhận biết thảo dược</a>
+				        </li>
+				        <li>
+				        	<a href="#">Khoá học y khoa</a>
+				        </li>
+				        <li>
+				        	<a href="#">Tin Tức</a>
+				        </li>
+			        </ul>
+	        	</div>
+	        </div>
 	    </div>
-		<hr class="clearfix w-100 d-md-none pb-3">
-			<div class="col-md-3 mb-md-0 mb-3">
-		        <h5 class="text-uppercase">Links</h5>
-		        <ul class="list-unstyled">
-			        <li>
-				    	<a href="#">Trang chủ</a>
-			        </li>
-			        <li>
-			        	<a href="#">Dấu hiệu bệnh</a>
-			        </li>
-			        <li>
-			        	<a href="#">Các bệnh thường gặp</a>
-			        </li>
-			        <li>
-			        	<a href="#">Sơ Cứu</a>
-			        </li>
-		        </ul>
-        	</div>
- 		    <div class="col-md-3 mb-md-0 mb-3">
-		        <ul class="list-unstyled">
-			        <li>
-			        	<a href="#">Nhận biết thảo dược</a>
-			        </li>
-			        <li>
-			        	<a href="#">Khoá học y khoa</a>
-			        </li>
-			        <li>
-			        	<a href="#">Tin Tức</a>
-			        </li>
-		        </ul>
-        	</div>
-        </div>
-    </div>
-    <div class="footer-copyright text-center py-3">Website:
-		<a href="#">Kiến thức y tế</a>
-	</div>
+	    <div class="footer-copyright text-center py-3">Website:
+			<a href="#">Kiến thức y tế</a>
+		</div>
 	</footer>
+
+
+	<script type="text/javascript">
+		var mybutton = document.getElementById("myBtn");
+
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+	</script>
+
+
 
 </body>
 </html>
