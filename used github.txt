@@ -6,3 +6,6 @@ git push
 
 - Update từ github về:
 git pull
+
+- Lấy file về:
+git clone <link>
