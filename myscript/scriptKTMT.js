@@ -74,3 +74,20 @@ function showSlides(n) {
 	slides[slideIndex-1].style.display = "block";  
 	dots[slideIndex-1].className += " active";
 }
+
+
+
+
+
+/* Demo purposes only */
+$(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+
+
+
+function myNavKhac(x) {
+  x.classList.toggle("change");
+}
