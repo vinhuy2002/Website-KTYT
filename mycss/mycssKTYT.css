@@ -154,6 +154,7 @@ img {vertical-align: middle;}
 
 
   #mySidenav a {
+    z-index: 2;
     position: absolute;
     left: -80px;
     transition: 0.3s;
@@ -168,11 +169,11 @@ img {vertical-align: middle;}
     left: 0px;
   }
   #cuahang {
-    top: 115px;
+    top: 130px;
     background-color: crimson;
   }
   #khoahoc {
-    top: 195px;
+    top: 210px;
     background-color: #04AA6D;
   }
 /*#tieuthuyet {
@@ -586,6 +587,10 @@ img {vertical-align: middle;}
   width: 100%;
 }
 
+.borderradius {
+  border-radius: 3px 3px 30px 3px;
+}
+
 
 
 
@@ -632,6 +637,7 @@ html {
   max-width: 1760px;
   padding: 0;
   position: relative;
+  background-color: white;
 }
 a.card-link {
   color: #1A1A1A;
@@ -643,7 +649,8 @@ a.card-link {
   position: relative;
 }
 .row-big-card .cont .card-inner {
-  padding: 40px 20px 0 60px;
+  border-radius: 3px 3px 30px 3px;
+  padding: 40px 0px 0px 60px;
   position: absolute;
   z-index: 1;
   top: 0;
@@ -708,11 +715,10 @@ a.card-link {
 }
 
 span.cta-card {
-  display: inline-block;
   font-size: 18px;
   line-height: 82px;
   text-transform: uppercase;
-  padding: 0 13%;
+  padding: 3% 5%;
   border: 1px solid #1A1A1A;
   color: #1A1A1A;
   text-decoration: none;
@@ -723,12 +729,13 @@ span.cta-card {
 }
 a.card-link:hover span.cta-card {
   background: #1cbbb4;
+  border: 1px solid #1cbbb4;
   color: white;
 }
 
 @media all and (max-width: 1774px) {
   .card-inner h3 {
-    font-size: calc(30px  + (76 - 30)*(100vw - 1100px)/(1774 - 1100));
+    font-size: 40px;
     line-height: calc(36px  + (82 - 36)*(100vw - 1100px)/(1774 - 1100));
   }
   .card-inner h4 {
@@ -842,3 +849,7 @@ a.card-link:hover span.cta-card {
       line-height: calc(34px  + (60 - 34)*(100vw - 320px)/(610 - 320));
     }
   }
+
+
+
+
