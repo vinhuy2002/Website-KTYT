@@ -7,6 +7,118 @@ body {
 
 }
 
+.binhThuong {
+  text-decoration: none;
+  color: black;
+}
+.binhThuong:hover {
+  color: #1cbbb4;
+  text-decoration: none;
+}
+
+.imgtintuc {
+  height: 250px;
+  width: 100%;
+}
+
+.borderradius {
+  border-radius: 3px 3px 30px 3px;
+}
+
+.bg-huyenthoai {
+  background-color: #1cbbb4;  
+}
+
+
+
+
+
+
+  .trang {
+    margin-top: 10px;
+  }
+  .trang img {
+    border-radius: 3px 3px 3px 3px;
+    width: 100%;
+  }
+
+  .img300 img {
+    width: 300px;
+  }
+
+  .img250 img {
+    width: 250px;
+  }
+
+  .topp {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .top10 {
+    margin-top: 10px;
+  }
+  .top20{
+    margin-top: 20px;
+  }
+
+
+
+
+  .truyen a {
+    text-decoration: none;
+  }
+  .truyen img {
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
+    height: 80%;
+  }
+  .truyen {
+    text-align: center;
+  } 
+  .alert {
+    text-align: center;
+    background-color: #1cbbb4;
+    color: white;
+  }
+
+
+
+.btnGDC {
+  border-radius: 30px 30px 30px 30px;
+  margin-top: 15px;
+  /*margin-bottom: 50px;*/
+}
+.alertGDC {
+  font-size: 25px; 
+  text-align: left;
+}
+.alertGDC a {
+  color: white;
+}
+.alertGDC a:hover {
+  color: #00d6d6;
+}
+
+
+.rightt {
+  float: right;
+}
+.leftt {
+  float: left;
+}
+.midd {
+  margin:auto;
+  display:block;
+}
+
+
+
+
+
+
+
+
 .navbarr {
   font-weight: bold;
   width: 100%;
@@ -22,7 +134,6 @@ body {
   text-decoration: none;
 }
 .navbarr a:hover, .subnav:hover .subnavbtn {
-  /*background-color: #00BFFF;*/
   background-color: #00d6d6;
 }
 
@@ -255,52 +366,6 @@ img {vertical-align: middle;}
 
 
 
-  .trang {
-    margin-top: 10px;
-  }
-  .trang img {
-    border-radius: 3px 3px 3px 3px;
-    width: 100%;
-  }
-
-  .img300 img {
-    width: 300px;
-  }
-
-  .img250 img {
-    width: 250px;
-  }
-
-  .topp {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .top10 {
-    margin-top: 10px;
-  }
-  .top20{
-    margin-top: 20px;
-  }
-
-
-
-
-  .truyen a {
-    text-decoration: none;
-  }
-  .truyen img {
-    border-radius: 5px 5px 0px 0px;
-    width: 100%;
-    height: 80%;
-  }
-  .truyen {
-    text-align: center;
-  } 
-  .alert {
-    text-align: center;
-  }
-
 
 
 
@@ -347,9 +412,9 @@ img {vertical-align: middle;}
 }
 
 
-.alert {
+/*.alert {
   text-align: center;
-}
+}*/
 
 
 /*hinh anh*/
@@ -572,49 +637,7 @@ img {vertical-align: middle;}
 
 
 
-/*tin tuc*/
-.binhThuong {
-  text-decoration: none;
-  color: black;
-}
-.binhThuong:hover {
-  color: #1cbbb4;
-  text-decoration: none;
-}
 
-.imgtintuc {
-  height: 250px;
-  width: 100%;
-}
-
-.borderradius {
-  border-radius: 3px 3px 30px 3px;
-}
-
-
-
-
-
-.btnGDC {
-  border-radius: 30px 30px 30px 30px;
-  margin-top: 15px;
-  margin-bottom: 50px;
-}
-.alertGDC {
-  font-size: 25px; 
-  text-align: left;
-}
-
-.rightt {
-  float: right;
-}
-.leftt {
-  float: left;
-}
-.midd {
-  margin:auto;
-  display:block;
-}
 
 
 
