@@ -1,3 +1,8 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
 .img-slider{
   position: relative;
   width: 800px;
@@ -82,11 +87,6 @@
 
   .img-slider .slide .info h2{
     font-size: 20px;
-  }
-
-  .info {
-    /*background: unset;*/
-    /*display: none;*/
   }
 
   .img-slider .slide .info p{
@@ -264,8 +264,6 @@ ul{
   font-size: 16px;
   padding: 10px 0;
   outline: none;
-  /*resize: vertical;*/
-  /*size: 50;*/
 }
 
 .btn_u{
