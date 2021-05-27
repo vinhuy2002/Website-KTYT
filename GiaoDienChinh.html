@@ -2,12 +2,12 @@
 <html>
 <head>
 	<title>Trang chủ - Kiến Thức Y Tế</title>
-	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="mycss/mycssKTYT.css">
 	<script src="myscript/scriptKTMT.js"></script>
-	<script src="bootstrap/jquery.min.js"></script>
-	<script src="bootstrap/popper.min.js"></script>
-	<script src="bootstrap/bootstrap.min.js"></script>
+	<script src="Bootstrap/jquery.min.js"></script>
+	<script src="Bootstrap/popper.min.js"></script>
+	<script src="Bootstrap/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
 	<link rel="stylesheet" type="text/css" href="mycss/vinhuy.css">
 </head>
@@ -15,12 +15,12 @@
 
 	<div class="container topp">
 		<div class="row">
-			<div class="col-sm-5">
+			<div class="col-lg-5">
 				<a href="GiaoDienChinh.html">
 					<img src="images/logoKTYT.png" style="width:240px;">	
 				</a>
 			</div>
-			<div class="col-sm-7">
+			<div class="col-lg-7">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Bạn cứ nhập từ khoá, còn lại để KTYT lo">
 					<div class="input-group-append">
@@ -33,59 +33,73 @@
 		</div>
 	</div>
 
-	<div class="navbarr">
-		<div class="container">
-			<a href="GiaoDienChinh.html" class="tablinks">Trang chủ</a>
-			<div class="subnav">
-				<button href="#theloai" class="subnavbtn" onclick="myFunction()"><b>Dấu hiệu bệnh</b></button>
-				<div id="myDropdown" class="subnav-content">
-					<div class="container">
-						<input class="form-control" type="text" placeholder="Nhập dấu hiệu" id="myInput" onkeyup="filterFunction()" style="width:100%"><br>
-						<a href="#company">Co giật</a>
-						<a href="#company">Chán ăn</a>
-						<a href="#company">Chóng mặt</a>
-						<a href="#company">Chảy mồ hôi</a>
-						<a href="#company">Chảy máu mũi</a>
-						<a href="#company">Chấm đỏ</a>
-						<a href="#company">Chảy máu chân răng</a>
-						<a href="#company">Dị ứng</a>
-						<a href="#company">Đau đầu</a>
-						<a href="#company">Đốm nhỏ trên da</a>
-						<a href="#company">Đau bụng</a>
-						<a href="#company">Đau vai gáy</a>
-						<a href="#company">Đau khớp</a>
-						<a href="#company">Đau họng</a>
-						<a href="#company">Ho Khan</a>
-						<a href="#company">Hoa mắt</a>
-						<a href="#company">Kén ăn</a>
-						<a href="#company">Khó thở</a>
-						<a href="#company">Khó tiêu</a>
-						<a href="#company">Mắt mờ</a>
-						<a href="#company">Mệt mỏi</a>
-						<a href="#company">Mẫn cảm</a>
-						<a href="#company">Ngứa</a>
-						<a href="#company">Ngủ không được</a>
-						<a href="#company">Ngộ độc</a>
-						<a href="#company">Nấm chân</a>
-						<a href="#company">Ù tai</a>
-						<a href="#company">Sùi bọt mép</a>
-						<a href="#company">Sứng vù</a>
-						<a href="#company">Tức ngực</a>
-						<a href="#company">Trẻ khóc</a>
-						<a href="#company">Tiểu ra máu</a>
-						<a href="#company">...</a> 	
-					</div>
-				</div>
-			</div>
 
-			<a href="BenhThuongGap.html">Các bệnh thường gặp</a>
-			<a href="SoCuu.html" onclick="openCity(event, 'SoCuu')">Sơ cứu</a>
-			<a href="NhanBietThaoDuoc.html" onclick="openCity(event, 'NhanBietThaoDuoc')">Nhận biết thảo dược</a>
-			<a href="KhoaHocYKhoa.html" onclick="openCity(event, 'KhoaHocYKhoa')">Khóa học y khoa</a>
-			<a href="TinTuc.html" onclick="openCity(event, 'TinTuc')">Tin tức</a>
-			<a class="openbtn" onclick="openNav()" style="float:right;">Khác</a>
-		</div>
-		
+		<nav class="navbar navbar-dark navbar-expand-lg text-white">
+	    <div class="container">
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainText" aria-controls="mainText" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+	      <div class="collapse navbar-collapse" id="mainText">
+	        <ul class="navbar-nav mr-auto">
+	          <li class="nav-item"><a href="GiaoDienChinh.html" class="nav-link text-white">Trang chủ</a></li>
+
+	          <!-- Dropdown  -->
+	            <li class="nav-item dropdown"><a href="#" class="nav-link text-white dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navDrop">Dấu hiệu bệnh</a>
+	              <div class="dropdown-menu" aria-labelledby="navDrop">
+	                <div class="container ">
+	                  <div class="subnav-content">
+	                    <input class="form-control" type="text" placeholder="Nhập dấu hiệu" id="myInput" onkeyup="filterFunction()" style="width:100%"><br>
+	                    <a href="#company">Co giật</a>
+	                    <a href="#company">Chán ăn</a>
+	                    <a href="#company">Chóng mặt</a>
+	                    <a href="#company">Chảy mồ hôi</a>
+	                    <a href="#company">Chảy máu mũi</a>
+	                    <a href="#company">Chấm đỏ</a>
+	                    <a href="#company">Chảy máu chân răng</a>
+	                    <a href="#company">Dị ứng</a>
+	                    <a href="#company">Đau đầu</a>
+	                    <a href="#company">Đốm nhỏ trên da</a>
+	                    <a href="#company">Đau bụng</a>
+	                    <a href="#company">Đau vai gáy</a>
+	                    <a href="#company">Đau khớp</a>
+	                    <a href="#company">Đau họng</a>
+	                    <a href="#company">Ho Khan</a>
+	                    <a href="#company">Hoa mắt</a>
+	                    <a href="#company">Kén ăn</a>
+	                    <a href="#company">Khó thở</a>
+	                    <a href="#company">Khó tiêu</a>
+	                    <a href="#company">Mắt mờ</a>
+	                    <a href="#company">Mệt mỏi</a>
+	                    <a href="#company">Mẫn cảm</a>
+	                    <a href="#company">Ngứa</a>
+	                    <a href="#company">Ngủ không được</a>
+	                    <a href="#company">Ngộ độc</a>
+	                    <a href="#company">Nấm chân</a>
+	                    <a href="#company">Ù tai</a>
+	                    <a href="#company">Sùi bọt mép</a>
+	                    <a href="#company">Sứng vù</a>
+	                    <a href="#company">Tức ngực</a>
+	                    <a href="#company">Trẻ khóc</a>
+	                    <a href="#company">Tiểu ra máu</a>
+	                    <a href="#company">...</a> 
+	                  </div>
+	                </div>
+	              </div>
+	            </li>
+	          <!-- Dropdown  -->
+
+	          <li class="nav-item"><a href="BenhThuongGap.html" class="nav-link text-white">Các bệnh thường gặp</a></li>
+	          <li class="nav-item"><a href="SoCuu.html" class="nav-link text-white" onclick="openCity(event, 'SoCuu')">Sơ cứu</a></li>
+	          <li class="nav-item"><a href="NhanBietThaoDuoc.html" class="nav-link text-white" onclick="openCity(event, 'NhanBietThaoDuoc')">Nhận biết thảo dược</a></li>
+	          <li class="nav-item"><a href="KhoaHocYKhoa.html" class="nav-link text-white" onclick="openCity(event, 'KhoaHocYKhoa')">Khoá học y khoa</a></li>
+	          <li class="nav-item"><a href="TinTuc.html" class="nav-link text-white" onclick="openCity(event, 'TinTuc')">Tin tức</a></li>
+	        </ul>
+	        <ul class="navbar-nav mr-auto">
+	          <li class="nav-item "><a href="#" class="nav-link text-white" onclick="openNav()">Khác</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>	
 
 		<div id="mySidepanel" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding: 1px 13px 1px 13px;">×</a>
@@ -99,7 +113,7 @@
 		<button onclick="topFunction()" id="topBtn" title="Go to top">
 			<img src="images/backtop.png">
 		</button>
-	</div>
+
 
 	<div id="mySidenav">
 		<a href="CuaHangYTe.html" id="cuahang" style="font-size:15px">Cửa hàng sức khỏe</a>
@@ -116,8 +130,8 @@
 			<strong class="rightt"><a href="BenhThuongGap.html">|||</a></strong>
 		</div>
 		<div class="row">
-			<div class="col-sm-4">
-				<figure class="snip1369 snip1370 green">
+			<div class="col-lg-4">
+				<figure class="snip1369 snip1370 green mx-auto">
 					<img src="images/sot.png" alt="pr-sample15" class="imgtintuc" />
 					<div class="image"><img src="images/sot.png" alt="pr-sample15" /></div>
 					<figcaption>
@@ -128,8 +142,8 @@
 					<a href="tintuc/benh-nhan-bi-sot-nen-dieu-tri-nhu-the-nao.html"></a>
 				</figure>
 			</div>
-			<div class="col-sm-4">
-				<figure class="snip1369 snip1370 green">
+			<div class="col-lg-4">
+				<figure class="snip1369 snip1370 green mx-auto">
 					<img src="images/thuy-dau.jpg" alt="pr-sample15" class="imgtintuc"/>
 					<div class="image"><img src="images/thuy-dau.jpg" alt="pr-sample15" /></div>
 					<figcaption>
@@ -140,8 +154,8 @@
 					<a href="tintuc/cham-soc-tre-bi-thuy-dau-dung-cach-tranh-cac-bien-chung-nguy-hiem.html"></a>
 				</figure>
 			</div>
-			<div class="col-sm-4">
-				<figure class="snip1369 snip1370 green">
+			<div class="col-lg-4">
+				<figure class="snip1369 snip1370 green mx-auto">
 					<img src="images/benh-soi.jpg" alt="pr-sample15" class="imgtintuc" />
 					<div class="image"><img src="images/benh-soi.jpg" alt="pr-sample15" /></div>
 					<figcaption>
@@ -163,8 +177,8 @@
 			<strong class="rightt"><a href="SoCuu.html">|||</a></strong> 
 		</div>
 		<div class="row">
-			<div class="col-sm-4">
-				<figure class="snip1369 snip1370 green">
+			<div class="col-lg-4">
+				<figure class="snip1369 snip1370 green mx-auto">
 					<img src="images/duoi-nuoc.png" alt="pr-sample15" class="imgtintuc" />
 					<div class="image"><img src="images/duoi-nuoc.png" alt="pr-sample15" /></div>
 					<figcaption>
@@ -175,8 +189,8 @@
 					<a href="#"></a>
 				</figure>
 			</div>
-			<div class="col-sm-4">
-				<figure class="snip1369 snip1370 green">
+			<div class="col-lg-4">
+				<figure class="snip1369 snip1370 green mx-auto">
 					<img src="images/cam-mau.jpg" alt="pr-sample15" class="imgtintuc" />
 					<div class="image"><img src="images/cam-mau.jpg" alt="pr-sample15" /></div>
 					<figcaption>
@@ -187,8 +201,8 @@
 					<a href="#"></a>
 				</figure>
 			</div>
-			<div class="col-sm-4">
-				<figure class="snip1369 snip1370 green">
+			<div class="col-lg-4">
+				<figure class="snip1369 snip1370 green mx-auto">
 					<img src="images/ong-dot.jpg" alt="pr-sample15" class="imgtintuc" />
 					<div class="image"><img src="images/ong-dot.jpg" alt="pr-sample15" /></div>
 					<figcaption>
@@ -210,8 +224,8 @@
 			<strong class="rightt"><a href="NhanBietThaoDuoc.html">|||</a></strong> 
 		</div>
 		<div class="row">
-			<div class="col-sm-4">
-				<figure class="snip1369 snip1370 green">
+			<div class="col-lg-4">
+				<figure class="snip1369 snip1370 green mx-auto">
 					<img src="images/dong-trung-ha-thao.jpg" alt="pr-sample15" class="imgtintuc" />
 					<div class="image"><img src="images/dong-trung-ha-thao.jpg" alt="pr-sample15" /></div>
 					<figcaption>
@@ -222,8 +236,8 @@
 					<a href="#"></a>
 				</figure>
 			</div>
-			<div class="col-sm-4">
-				<figure class="snip1369 snip1370 green">
+			<div class="col-lg-4">
+				<figure class="snip1369 snip1370 green mx-auto">
 					<img src="images/nhan-sam.jpg" alt="pr-sample15" class="imgtintuc" />
 					<div class="image"><img src="images/nhan-sam.jpg" alt="pr-sample15" /></div>
 					<figcaption>
@@ -234,8 +248,8 @@
 					<a href="#"></a>
 				</figure>
 			</div>
-			<div class="col-sm-4">
-				<figure class="snip1369 snip1370 green">
+			<div class="col-lg-4">
+				<figure class="snip1369 snip1370 green mx-auto">
 					<img src="images/cam-thao.jpg" alt="pr-sample15" class="imgtintuc" />
 					<div class="image"><img src="images/cam-thao.jpg" alt="pr-sample15" /></div>
 					<figcaption>
@@ -343,8 +357,8 @@
 		</div>
 		<div class="row">
 			<div class="row">
-				<div class="col-sm-4">
-					<figure class="snip1369 snip1370 green">
+				<div class="col-lg-4">
+					<figure class="snip1369 snip1370 green mx-auto">
 						<img src="images/doc-sach.jpg" alt="pr-sample15" />
 						<div class="image"><img src="images/doc-sach.jpg" alt="pr-sample15" /></div>
 						<figcaption>
@@ -355,7 +369,7 @@
 						<a href="#"></a>
 					</figure>
 				</div>
-				<div class="col-sm-8 top10">
+				<div class="col-lg-8 top10">
 					<a href="" class="binhThuong">
 						<h3><b>Thói quen đọc sách: Những lợi ích sức khỏe tuyệt vời</b></h3>
 					</a>
@@ -370,8 +384,8 @@
 			</div><br>
 
 			<div class="row">
-				<div class="col-sm-4">
-					<figure class="snip1369 snip1370 green">
+				<div class="col-lg-4">
+					<figure class="snip1369 snip1370 green mx-auto">
 						<img src="images/thuy-dau.jpg" alt="pr-sample15" class="imgtintuc"/>
 						<div class="image"><img src="images/thuy-dau.jpg" alt="pr-sample15" /></div>
 						<figcaption>
@@ -382,7 +396,7 @@
 						<a href="#"></a>
 					</figure>
 				</div>
-				<div class="col-sm-8 top10">
+				<div class="col-lg-8 top10">
 					<a href="" class="binhThuong">
 						<h3><b>Chăm sóc trẻ bị thủy đậu đúng cách tránh các biến chứng nguy hiểm</b></h3>
 					</a>
@@ -397,8 +411,8 @@
 			</div><br>
 
 			<div class="row">
-				<div class="col-sm-4">
-					<figure class="snip1369 snip1370 green">
+				<div class="col-lg-4">
+					<figure class="snip1369 snip1370 green mx-auto">
 						<img src="images/oai-huong.jpg" alt="pr-sample15" />
 						<div class="image"><img src="images/oai-huong.jpg" alt="pr-sample15" /></div>
 						<figcaption>
@@ -409,7 +423,7 @@
 						<a href="#"></a>
 					</figure>
 				</div>
-				<div class="col-sm-8 top10">
+				<div class="col-lg-8 top10">
 					<a href="" class="binhThuong">
 						<h3><b>Hoa oải hương và những công dụng mà bạn chưa biết</b></h3>
 					</a>
@@ -424,8 +438,8 @@
 			</div><br>
 
 			<div class="row">
-				<div class="col-sm-4">
-					<figure class="snip1369 snip1370 green">
+				<div class="col-lg-4">
+					<figure class="snip1369 snip1370 green mx-auto">
 						<img src="images/dong-trung-ha-thao.jpg" alt="pr-sample15" />
 						<div class="image"><img src="images/dong-trung-ha-thao.jpg" alt="pr-sample15" /></div>
 						<figcaption>
@@ -436,7 +450,7 @@
 						<a href="#"></a>
 					</figure>
 				</div>
-				<div class="col-sm-8 top10">
+				<div class="col-lg-8 top10">
 					<a href="" class="binhThuong">
 						<h3><b>Đông trùng hạ thảo có tác dụng gì?</b></h3>
 					</a>
@@ -451,8 +465,8 @@
 			</div><br>
 
 			<div class="row">
-				<div class="col-sm-4">
-					<figure class="snip1369 snip1370 green">
+				<div class="col-lg-4">
+					<figure class="snip1369 snip1370 green mx-auto">
 						<img src="images/duoi-nuoc.png" alt="pr-sample15" />
 						<div class="image"><img src="images/duoi-nuoc.png" alt="pr-sample15" /></div>
 						<figcaption>
@@ -463,7 +477,7 @@
 						<a href="#"></a>
 					</figure>
 				</div>
-				<div class="col-sm-8 top10">
+				<div class="col-lg-8 top10">
 					<a href="" class="binhThuong">
 						<h3><b>Những điều cần biết về sơ cứu đuối nước</b></h3>
 					</a>
@@ -678,7 +692,8 @@
 
 		</div>
 		<div class="row_u">
-			<div class="mini-footer_u">CopyRight 2021: <a href="GiaoDienChinh.html">KTYT</a></div>
+			<div class="mini-footer_u">Copyright © 2021: <a href="GiaoDienChinh.html">KTYT</a></div>
+
 		</div>
 	</footer>
 

@@ -7,7 +7,7 @@
     <title>Admin - Kiến Thức Y Tế</title>
     <link rel="stylesheet" href="mycss/admin.css">
     <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="mycss/vinhuy.css">
+    <!-- <link rel="stylesheet" href="mycss/vinhuy.css"> -->
     <script src="Bootstrap/popper.min.js"></script>
     <script src="Bootstrap/jquery.min.js"></script>
     <script src="Bootstrap/bootstrap.min.js"></script>
@@ -20,7 +20,7 @@
             <a href="#" class="navbar-brand">
                Kiến Thức Y Tế
             </a>
-            <button class="navbar-toggle d-md-none collapsed mb-3" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="slidebar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-dark bg-primary collapsed mb-3 d-md-none px-2" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="slidebar" aria-expanded="false" aria-label="Toggle navigation" style="">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
@@ -38,11 +38,10 @@
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <div class="row">
-            
-            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse ">
-                <div class="position-sticky pt-md-3 h-100">
+    <div class="container-fluid ">
+        <div class="row ">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <div class="position-sticky pt-md-3">
                     <ul class="nav flex-column ">
                         <li class="nav-item mb-2 cusHov">
                             <a href="Admin.html" class="nav-link" aria-current="page" href="#">
@@ -67,7 +66,7 @@
                     </ul>
                 </div>
             </nav>
-            <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4 my-2">
+            <div class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4 my-2">
                 <div class="row my-4">
                     <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 ">
                         <div class="card hov">
@@ -118,7 +117,7 @@
                     </div>
                 </div>
                  
-            </main>
+            </div>
         </div>
     </div>
     <footer class="d-flex justify-content-center footer">
