@@ -119,63 +119,7 @@ body {
 
 
 
-.navbarr {
-  font-weight: bold;
-  width: 100%;
-  overflow: hidden;
-  background-color: #1cbbb4;
-}
-.navbarr a {
-  float: left;
-  color: white;
-  font-size: 16px;
-  text-align: center;
-  padding: 14px 14px;
-  text-decoration: none;
-}
-.navbarr a:hover, .subnav:hover .subnavbtn {
-  background-color: #00d6d6;
-}
 
-.subnav {
-  float: left;
-  overflow: hidden;
-  z-index: 3;
-}
-.subnav .subnavbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-.subnav-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  background-color: #00d6d6;
-  width: 100%;
-  z-index: 3;
-
-  padding-top:10px; 
-  padding-bottom: 10px;
-}
-.subnav-content a {
-  float: left;
-  color: white;
-  text-decoration: none;
-}
-.subnav-content a:hover {
-  color: #808080;
-  background-color: white;
-  border-radius: 10px 10px 10px 10px;
-}
-.subnav:hover .subnav-content {
-  display: block;
-}
 
 
 
@@ -392,12 +336,6 @@ img {vertical-align: middle;}
 }
 */
 
-
-@media screen and (max-width: 500px) {
-  .navbarr a {
-    display: block;
-  }
-}
 
 @media (max-width: 991px){
 
@@ -874,5 +812,7 @@ a.card-link:hover span.cta-card {
   }
 
 
-
+/*img{
+  margin: auto !important;
+}*/
 
