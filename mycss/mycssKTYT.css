@@ -4,7 +4,6 @@ body {
   margin: 0;
   background-color: #eee;
   font-size: 17px;
-
 }
 
 .binhThuong {
@@ -40,6 +39,8 @@ body {
   .trang img {
     border-radius: 3px 3px 3px 3px;
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.226) 0px 5px 15px;
+    transition: all 0.6s cubic-bezier(.25,.8,.25,1);
   }
 
   .img300 img {
@@ -61,7 +62,9 @@ body {
   .top20{
     margin-top: 20px;
   }
-
+.imgbinhthuong {
+  box-shadow:rgba(0, 0, 0, 0) 0px 0px 0px;
+}
 
 
 
@@ -115,6 +118,29 @@ body {
 
 
 
+
+.card{
+    height: 100%;
+    background: #eee;
+    border-radius: 6px !important;
+    border-top-width: 5px;
+    border-top-color: crimson;
+    box-shadow: rgba(0, 0, 0, 0.226) 0px 5px 15px;
+    transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+}
+.card-header{
+    background: white !important;
+    border-radius: 6px !important;
+    border-bottom:  none !important;
+    transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+}
+
+.hov:hover{
+    /*border-color: #1cbbb4;*/
+    box-shadow: rgba(0, 0, 0, 0.568) 0px 5px 15px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+}
 
 
 
@@ -599,6 +625,7 @@ html {
   padding: 0;
   position: relative;
   background-color: white;
+  transition: all 0.6s cubic-bezier(.25,.8,.25,1);
 }
 a.card-link {
   color: #1A1A1A;
@@ -608,6 +635,7 @@ a.card-link {
 .card-img {
   padding-left: 45%;
   position: relative;
+  transition: all 0.6s cubic-bezier(.25,.8,.25,1);
 }
 .row-big-card .cont .card-inner {
   border-radius: 3px 3px 30px 3px;
@@ -619,6 +647,7 @@ a.card-link {
   bottom: 0;
   background: white;
   width: 40%;
+  transition: all 0.6s cubic-bezier(.25,.8,.25,1);
 }
 .card-img div {
   display: block;
@@ -632,6 +661,7 @@ a.card-link {
   background-position: center;
   width: 100%;
   padding-bottom: 64%;
+  transition: all 0.6s cubic-bezier(.25,.8,.25,1);
 }
 .card-inner h3 {
   font-size: 76px;
@@ -640,6 +670,7 @@ a.card-link {
   margin: 0 0 1.5%;
   -webkit-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
+  transition: all 0.6s cubic-bezier(.25,.8,.25,1);
 }
 .inner-text p {
   margin: 1.5% 0 0;
@@ -668,11 +699,13 @@ a.card-link {
   margin: 0;
   -webkit-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
+  transition: all 0.6s cubic-bezier(.25,.8,.25,1);
 }
 
 .row-big-card .cont:hover .card-img img, .row-big-card .cont:hover .card-img div {
   -webkit-clip-path: polygon(0 0, 92% 0, 100% 100%, 8% 100%);
   clip-path: polygon(0 0, 92% 0, 100% 100%, 8% 100%);
+  transition: all 0.6s cubic-bezier(.25,.8,.25,1);  
 }
 
 span.cta-card {
@@ -692,6 +725,7 @@ a.card-link:hover span.cta-card {
   background: #1cbbb4;
   border: 1px solid #1cbbb4;
   color: white;
+  transition: all 0.6s cubic-bezier(.25,.8,.25,1);
 }
 
 @media all and (max-width: 1774px) {
@@ -750,24 +784,8 @@ a.card-link:hover span.cta-card {
   }
 }
 
-@media all and (max-width: 960px) {
-  .card-img div {
-    padding-bottom: 100%;
-  }
-  @media (max-width: 610px) {
-    .card-inner h4 {
-      font-size: calc(18px + (24 - 18)*(100vw - 320px)/(610 - 320));
-      line-height: calc(22px + (26 - 22)*(100vw - 320px)/(610 - 320));
-    }
-  }
   
-  @media all and (max-width: 768px) {
-    .card-img div {
-      padding-bottom: 110%;
-    }
-  }
-  
-  @media all and (max-width: 610px) {
+  @media all and (max-width: 1000px) {
     .row-big-card .cont .card-inner {
       padding: 0 20px 30px;
       position: relative;
