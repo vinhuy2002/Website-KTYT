@@ -12,7 +12,107 @@
     <script src="../Bootstrap/popper.min.js"></script>
     <script src="../Bootstrap/bootstrap.min.js"></script>
     <script src="../Bootstrap/all.js" data-auto-replace-svg="nest"></script>
+    
+    <style type="text/css">
+    :root{
+      --text-light: rgba(255,255,255,0.6);
+      --text-lighter: rgba(255,255,255,0.9);
+      --spacing-s: 8px;
+      --spacing-m: 16px;
+      --spacing-l: 24px;
+      --spacing-xl: 32px;
+      --spacing-xxl: 64px;
+      --width-container: 1200px;
+  }
 
+  .hero-section{
+      align-items: flex-start;
+      display: flex;
+      min-height: 100%;
+      justify-content: center;
+      padding: var(--spacing-xxl) var(--spacing-l);
+  }
+
+  .carddd-grid{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: var(--spacing-l);
+      grid-row-gap: var(--spacing-l);
+      max-width: var(--width-container);
+      width: 100%;
+  }
+
+  @media(min-width: 540px){
+      .carddd-grid{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media(min-width: 960px){
+  .carddd-grid{
+    grid-template-columns: repeat(4, 1fr); 
+}
+}
+
+.carddd{
+  list-style: none;
+  position: relative;
+}
+
+.carddd:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.carddd__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: 
+  filter 200ms linear,
+  transform 200ms linear;
+}
+
+.carddd:hover .carddd__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.carddd-grid:hover > .carddd:not(:hover) .carddd__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.carddd__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.carddd__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.carddd__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+</style>
 </head>
 <body>
 
@@ -128,59 +228,49 @@
     </div>
 
     <div class="container trang top20">
-        <div class="row">
-            <div class="col-lg-4">
-                <img src="../images/khoahoc-covid19.jpg"><br><br>
-                <center>
-                    <a href="" class="binhThuong midd">
-                        <button type="button" class="btn btn-info ">Đăng ký khóa học</button>
-                    </a>
-                </center>
-                <br>
+        
+
+        <section class="hero-section">
+          <div class="carddd-grid">
+            <a class="carddd" href="#">
+              <div class="carddd__background" style="background-image: url(../images/264.png)"></div>
+              <div class="carddd__content">
+                <p class="carddd__category">Category</p>
+                <h3 class="carddd__heading">Example carddd Heading</h3>
             </div>
-            <div class="col-lg-8">
-                <div class="card hov">
-                    <div class="card-body">
-                      <h2>GIỚI THIỆU KHÓA HỌC</h2>
-                      <p><i>“Một trong những phẩm chất cần thiết của bác sĩ lâm sàng là quan tâm đến con người: bí quyết chăm sóc bệnh nhân là chăm sóc bệnh nhân”</i></p>
-                      <p><b>Khóa học này sẽ dạy bạn cách chăm sóc hiệu quả cho những bệnh nhân bị bệnh nặng trong đại dịch COVID-19.</b></p>
-                      <p>Bạn sẽ học cách thực hành hàng ngày cho các nhân viên lâm sàng tuyến đầu hỗ trợ bệnh nhân chăm sóc quan trọng có và không có COVID-19, cũng như cách áp dụng các nguyên tắc thông khí và hỗ trợ nội tạng để chăm sóc bệnh nhân bị bệnh nặng do coronavirus.</p>
-                      <p><b>Sẽ bao gồm những chủ đề nào?</b></p>
-                      <p>Bệnh nhân suy nhược<br>Thực hành hàng ngày về chăm sóc quan trọng<br> Thông số kỹ thuật COVID-19<br> Hỗ trợ thông gió và nội tạng<br> Chăm sóc bản thân và Hạnh phúc của Nhân viên</p>
-                      <p><b>Khi nào bạn muốn bắt đầu?</b></p>
-                      <p>Hầu hết các khóa học FutureLearn chạy nhiều lần. Mỗi lần chạy của một khóa học đều có ngày bắt đầu đã định nhưng bạn có thể tham gia và hoàn thành khóa học sau khi bắt đầu.</p>
-                      <p><b>Bạn sẽ đạt được gì?</b></p>
-                      <p>Vào cuối khóa học, bạn sẽ có thể:</p>
-                      <p>
-                          <li>Áp dụng các nguyên tắc hiện tại và đang phát triển của Thực hành Bảo vệ Cá nhân trong việc chăm sóc bệnh nhân COVID-19.</li>
-                          <li>Áp dụng các nguyên tắc dựa trên bằng chứng về hỗ trợ và theo dõi nội tạng nâng cao cho bệnh nhân bị bệnh nặng COVID-19.</li>
-                          <li>Áp dụng các thực hành hàng ngày dựa trên bằng chứng để chăm sóc bệnh nhân nặng.</li>
-                          <li>Phát triển một loạt các phương pháp chăm sóc bản thân chuyên biệt, bao gồm hiện diện, tự tử tế, lắng nghe từ bi, đặt lòng bàn chân, đi bộ một dặm bằng giày da đanh của chúng.</li>
-                          <li>Phản ánh một cách phê bình các yếu tố phức tạp cần thiết để đạt được cả sự tự nhận thức và lòng từ bi trong một môi trường căng thẳng cao độ.</li>
-                      </p>
-                      <p><b>Khóa học này dành cho ai?</b></p>
-                      <p>Khóa học này được thiết kế cho các nhân viên y tế tuyến đầu, những người đang chăm sóc cho những bệnh nhân bị bệnh nặng trong đại dịch COVID-19.</p>
-                      <p>Điều này bao gồm một loạt các chuyên gia chăm sóc sức khỏe trong chăm sóc cấp tính, từ nhiều nền tảng chuyên khoa lâm sàng khác nhau.</p>
-                      <p>Bạn có thể có một số kinh nghiệm chăm sóc quan trọng trước đây hoặc không có.</p>
-                      <p>Thông tin này sẽ hỗ trợ những kiến thức và kỹ năng chăm sóc quan trọng mới mẻ, các bác sĩ mới có trình độ chuyên môn, những người đang nâng cao kỹ năng và những người quay trở lại các dịch vụ lâm sàng cấp tính trong đại dịch COVID-19.</p>
-
-                      <p class="text-success"><i>Cập nhật lần cuối vào tháng 8 năm 2020</i></p>
-                  </div>
-              </div>
-          </div>
-      </div>
-
+        </a>
+        <a class="carddd" href="#">
+          <div class="carddd__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+          <div class="carddd__content">
+            <p class="carddd__category">Category</p>
+            <h3 class="carddd__heading">Example carddd Heading</h3>
+        </div>
+    </a>
+    <a class="carddd" href="#">
+      <div class="carddd__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+      <div class="carddd__content">
+        <p class="carddd__category">Category</p>
+        <h3 class="carddd__heading">Example carddd Heading</h3>
+    </div>
+</li>
+<a class="carddd" href="#">
+  <div class="carddd__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+  <div class="carddd__content">
+    <p class="carddd__category">Category</p>
+    <h3 class="carddd__heading">Example carddd Heading</h3>
+</div>
+</a>
+<div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
 
 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-  </div>
-
-
-  <script type="text/javascript">
+<script type="text/javascript">
     var mybutton = document.getElementById("topBtn");
 
     window.onscroll = function() {scrollFunction()};
@@ -192,6 +282,11 @@
             mybutton.style.display = "none";
         }
     }
+</script>
+<script>
+    $(document).ready(function(){
+      $('.toast').toast('show');
+  });
 </script>
 
 

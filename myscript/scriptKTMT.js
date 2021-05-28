@@ -79,6 +79,15 @@ function showSlides(n) {
 
 
 
+$(document).ready(function(){
+  $('.toast').toast('show');
+});
+
+
+
+
+
+
 /* Demo purposes only */
 $(".hover").mouseleave(
   function () {

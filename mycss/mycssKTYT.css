@@ -2,8 +2,10 @@ body {
   font-family: Helvetica,Tahoma,sans-serif,Arial;
   /*font-family: 'Montserrat', sans-serif;*/
   margin: 0;
-  background-color: #eee;
+  /*background-color: #f3f3f3;*/
+  background-color: #f3f3f3;
   font-size: 17px;
+  
 }
 
 .binhThuong {
@@ -41,6 +43,9 @@ body {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.226) 0px 5px 15px;
     transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+  }
+  .trang img:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
 
   .img300 img {
@@ -121,7 +126,8 @@ body {
 
 .card{
     height: 100%;
-    background: #eee;
+    background: #f3f3f3;
+    background: #f8f8f8;
     border-radius: 6px !important;
     border-top-width: 5px;
     border-top-color: crimson;
@@ -566,7 +572,7 @@ img {vertical-align: middle;}
 }
 
 .tag::before {
-  background: #eee;
+  background: #f3f3f3;
   border-radius: 10px;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
   content: '';
@@ -578,7 +584,7 @@ img {vertical-align: middle;}
 }
 
 .tag::after {
-  background: #eee;
+  background: #f3f3f3;
   border-bottom: 13px solid transparent;
   border-left: 10px solid crimson;
   border-top: 13px solid transparent;
@@ -728,7 +734,7 @@ a.card-link:hover span.cta-card {
   transition: all 0.6s cubic-bezier(.25,.8,.25,1);
 }
 
-@media all and (max-width: 1774px) {
+@media all and (max-width: 2000px) {
   .card-inner h3 {
     font-size: 40px;
     line-height: calc(36px  + (82 - 36)*(100vw - 1100px)/(1774 - 1100));
@@ -834,3 +840,111 @@ a.card-link:hover span.cta-card {
   margin: auto !important;
 }*/
 
+
+
+
+
+
+
+
+
+
+
+:root{
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+.hero-section{
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.carddd-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px){
+  .carddd-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .carddd-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.carddd{
+  list-style: none;
+  position: relative;
+}
+
+.carddd:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.carddd__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.carddd:hover .carddd__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.carddd-grid:hover > .carddd:not(:hover) .carddd__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.carddd__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.carddd__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.carddd__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
