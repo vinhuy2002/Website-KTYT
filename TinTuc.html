@@ -14,7 +14,7 @@
 	<script src="Bootstrap/all.js" data-auto-replace-svg="nest"></script>
 </head>
 <body>
-	
+	<div class='thetop'></div>
 	<div class="container topp">
 		<div class="row">
 			<div class="col-lg-5">
@@ -115,9 +115,9 @@
 	</div>
 
 
-	<button onclick="topFunction()" id="topBtn" title="Go to top">
-		<img src="images/backtop.png">
-	</button>
+	<div class="scrolltop">
+		<div class="scroll icon"><i class="fa fa-2x fa-angle-up"></i></div>
+	</div>
 
 
 	<div id="mySidenav">
@@ -551,6 +551,16 @@
 		function closeNav() {
 			document.getElementById("mySidepanel").style.width = "0";
 		}
+	</script>
+	<script type="text/javascript">
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 50 ) {
+				$('.scrolltop:hidden').stop(true, true).fadeIn();
+			} else {
+				$('.scrolltop').stop(true, true).fadeOut();
+			}
+		});
+		$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset().top},"1000");return false})})
 	</script>
 	
 	<footer class="footer_u">

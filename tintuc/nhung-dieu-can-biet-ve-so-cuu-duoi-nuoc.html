@@ -14,7 +14,7 @@
 	<script src="../Bootstrap/all.js" data-auto-replace-svg="nest"></script>
 </head>
 <body>
-
+	<div class='thetop'></div>
 	<div class="container topp">
 		<div class="row">
 			<div class="col-lg-5">
@@ -116,9 +116,9 @@
 	</div>
 
 
-	<button onclick="topFunction()" id="topBtn" title="Go to top">
-		<img src="../images/backtop.png">
-	</button>
+	<div class="scrolltop">
+		<div class="scroll icon"><i class="fa fa-2x fa-angle-up"></i></div>
+	</div>
 
 
 	<div id="mySidenav">
@@ -150,7 +150,7 @@
 				<li>Nhanh chóng đưa nạn nhân đến cơ sở y tế ngay cả khi nạn nhân có vẻ như bình thường hoặc đã hồi phục hoàn toàn sau sơ cứu vì nguy cơ khó thở thứ phát có thể xảy ra vài giờ sau ngạt nước</li>
 			</ul>
 		</ul>
-			
+		
 		<br><h4><b>2. Những việc cần tránh làm khi bị đuối nước</b></h4>
 		<p>Phần lớn các nạn nhân bị ngạt nước khi đưa đến cấp cứu tại các bệnh viện không được sơ cứu hay sơ cứu không đúng cách dẫn đến tử vong hoặc di chứng não do thiếu oxy. Các cách sơ cứu không đúng bao gồm:</p>
 		<li>Bỏ nhiều thời gian cho việc xốc nước: động tác dốc ngược nạn nhân không cần thiết và không nên thực hiện vì thường lượng nước vào phổi rất ít chứ không phải phổi chứa đầy nước như người dân thường nghĩ. Lượng nước rất ít này sẽ được tống ra ngoài khi nạn nhân tự thở lại. Ngoài ra việc xốc nước còn làm chậm thời gian cấp cứu thổi ngạt và tăng nguy cơ hít sặc.</li>
@@ -198,17 +198,14 @@
 	</div>
 
 	<script type="text/javascript">
-		var mybutton = document.getElementById("topBtn");
-
-		window.onscroll = function() {scrollFunction()};
-
-		function scrollFunction() {
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				mybutton.style.display = "block";
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 50 ) {
+				$('.scrolltop:hidden').stop(true, true).fadeIn();
 			} else {
-				mybutton.style.display = "none";
+				$('.scrolltop').stop(true, true).fadeOut();
 			}
-		}
+		});
+		$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset().top},"1000");return false})})
 	</script>
 
 

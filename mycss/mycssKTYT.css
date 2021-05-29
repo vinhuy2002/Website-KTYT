@@ -121,6 +121,20 @@ body {
 }
 
 
+.btnMoney{
+  width: 100%;
+  background-color: crimson;
+}
+
+
+
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 
 
 
@@ -209,6 +223,61 @@ img {vertical-align: middle;}
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
   }*/
+
+
+
+
+
+
+
+
+.scrolltop {
+  display:none;
+  width:100%;
+  margin:0 auto;
+  position:fixed;
+  bottom:20px;
+  right:10px; 
+  background:#1cbbb4;
+}
+.scroll {
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  background:#1cbbb4;
+  padding:10px 18px 10px 18px;
+  text-align: center;
+  margin: 0 0 0 0;
+  cursor:pointer;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;   
+  border-radius:100%; 
+
+}
+.scroll:hover {
+  background: crimson;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;    
+}
+.scroll:hover .fa {
+  padding-top:-10px;
+  
+}
+.scroll .fa {
+  font-size:30px;
+  margin-top:-5px;
+  margin-left:1px;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s; 
+}
+
+
 
 
 
