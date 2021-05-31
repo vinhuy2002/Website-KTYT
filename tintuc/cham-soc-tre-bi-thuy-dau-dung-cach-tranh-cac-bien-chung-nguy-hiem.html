@@ -163,6 +163,57 @@
 
 			</div>
 
+			<script type="text/javascript">
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 50 ) {
+						$('.scrolltop:hidden').stop(true, true).fadeIn();
+					} else {
+						$('.scrolltop').stop(true, true).fadeOut();
+					}
+				});
+				$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset().top},"1000");return false})})
+			</script>
+
+
+			<footer class="footer_u">
+				<div class="container_u">
+					<div class="row_u">
+						<div class="footer-col_u">
+							<h4 style="margin-bottom: 50px">Nhận thông tin mới nhất</h4>
+							<form>
+								<input type="email" name="" class="email_u" placeholder="Địa chỉ Email">
+								<br>
+								<button class="btn_u">Đăng Ký</button>
+							</form>
+						</div>
+						<div class="footer-col_u">
+							<h4>Hỗ trợ</h4>
+							<ul>
+								<li><a href="#">Liên Hệ Với Chúng Tôi</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">Về Website</a></li>
+							</ul>
+						</div>
+						<div class="footer-col_u">
+							<h4>Khám phá</h4>
+							<ul>
+								<li><a href="../index.html">Trang chủ</a></li>
+								<li><a href="../BenhThuongGap.html">Các bệnh thường gặp</a></li>
+								<li><a href="../SoCuu.html">Sơ cứu</a></li>
+								<li><a href="../NhanBietThaoDuoc.html">Nhận biết thảo dược</a></li>
+								<li><a href="../KhoaHocYKhoa.html">Khoa học y khoa</a></li>
+								<li><a href="../TinTuc.html">Tin tức</a></li>
+								<li><a href="../CuaHangYTe.html">Cửa hàng sức khỏe</a></li>
+							</ul>
+						</div>
+						<div class="footer-col_u">
+							<h4>Kết nối với chúng tôi</h4>
+							<div class="social-links_u">
+								<a href="https://www.facebook.com/no299792458/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/bangphan_nora/"><i class="fab fa-instagram"></i></a>
+							</div>
+						</div>
+					</div>
 
 			<script type="text/javascript">
 				$(window).scroll(function() {
@@ -219,9 +270,11 @@
 				</div>
 			</footer>
 		<footer>
-			<div class="row_u">
-				<div class="mini-footer_u">Copyright © 2021: <a href="index.html">KTYT</a></div>
-			</div>
-		</footer>
+				<div class="row_u">
+					<div class="mini-footer_u">Copyright © 2021: <a href="../index.html">KTYT</a></div>
+				</div>
+			</footer>
+
+
 		</body>
 		</html>
