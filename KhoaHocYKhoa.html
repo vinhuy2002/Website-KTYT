@@ -14,7 +14,7 @@
 	<script src="Bootstrap/all.js" data-auto-replace-svg="nest"></script>
 </head>
 <body>
-
+	<div class='thetop'></div>
 	<div class="container topp">
 		<div class="row">
 			<div class="col-lg-5">
@@ -113,9 +113,9 @@
 	</div>
 
 
-	<button onclick="topFunction()" id="topBtn" title="Go to top">
-		<img src="images/backtop.png">
-	</button>
+	<div class="scrolltop">
+		<div class="scroll icon"><i class="fa fa-2x fa-angle-up"></i></div>
+	</div>
 
 	<div id="mySidenav">
 		<a href="CuaHangSucKhoe.html" id="cuahang" style="font-size:15px">Cửa hàng sức khỏe</a>
@@ -187,17 +187,14 @@
 
 
 	<script type="text/javascript">
-		var mybutton = document.getElementById("topBtn");
-
-		window.onscroll = function() {scrollFunction()};
-
-		function scrollFunction() {
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				mybutton.style.display = "block";
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 50 ) {
+				$('.scrolltop:hidden').stop(true, true).fadeIn();
 			} else {
-				mybutton.style.display = "none";
+				$('.scrolltop').stop(true, true).fadeOut();
 			}
-		}
+		});
+		$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset().top},"1000");return false})})
 	</script>
 
 	
@@ -242,12 +239,12 @@
 			</div>
 
 		</div>
+	</footer>
+	<footer>
 		<div class="row_u">
 			<div class="mini-footer_u">Copyright © 2021: <a href="index.html">KTYT</a></div>
-
 		</div>
 	</footer>
-
 
 
 </body>

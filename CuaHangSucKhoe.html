@@ -14,7 +14,7 @@
 	<script src="Bootstrap/all.js" data-auto-replace-svg="nest"></script>
 </head>
 <body>
-
+	<div class='thetop'></div>
 	<div class="container topp">
 		<div class="row">
 			<div class="col-sm-5">
@@ -113,9 +113,9 @@
 	</div>
 
 
-	<button onclick="topFunction()" id="topBtn" title="Go to top">
-		<img src="images/backtop.png">
-	</button>
+	<div class="scrolltop">
+		<div class="scroll icon"><i class="fa fa-2x fa-angle-up"></i></div>
+	</div>
 
 	<div id="mySidenav">
 		<a href="CuaHangSucKhoe.html" id="cuahang" style="font-size:15px">Cửa hàng sức khỏe</a>
@@ -125,19 +125,40 @@
 
 
 	<div class="container trang  imgbinhthuong">
+
 		<div class="row row-big-card">
 			<div class="cont borderradius">
-				<a href="#" class="card-link">
+				<a href="sanpham/forever-active-ha-264-flp-ho-tro-xuong-khop.html" class="card-link">
+					<div class="card-img">
+						<img src="images/264.png" alt="pr-sample15"/>
+					</div>
+					<div class="card-inner">
+						<h3>Forever Active HA</h3>
+						<h4>Chống và phục hồi thoái hóa xương khớp 264</h4>
+						<div class="inner-text">
+							<p>Dùng cho những người có bệnh về khớp, bị khô chất nhầy trong ổ khớp, viêm khớp, người mắc bệnh gout. Không những thế, những người hay vận động, chơi thể thao nhiều cũng nên sử dụng sản phẩm này để bổ sung các vi chất dinh dưỡng từ thảo mộc cho cơ thể, giúp xương khớp hoạt động tốt nhất.</p>
+							<p>Lọ : 60 Viên</p>
+							<p>Mã số : 264 FLP</p>
+						</div>
+						<span class="cta-card">Đọc thêm</span>
+					</div>
+				</a>
+
+			</div>
+		</div>
+		<div class="row row-big-card">
+			<div class="cont borderradius">
+				<a href="sanpham/nuoc-uong-dinh-duong-forever-living-aloe-vera-gel-715flp.html" class="card-link">
 					<div class="card-img imgbinhthuong">
-						<img src="images/Forever-Aloe-Vera-Gel-015-Flp.png" alt="pr-sample15"/>
+						<img src="images/Forever-Aloe-Vera-Gel-715-Flp.jpg" alt="pr-sample15"/>
 					</div>
 					<div class="card-inner">
 						<h3>Forever Aloe Vera Gel</h3>
-						<h4>Nước uống dinh dưỡng 015</h4>
+						<h4>Nước uống dinh dưỡng 715</h4>
 						<div class="inner-text">
 							<p>Nước uống dinh dưỡng Forever Aloe Vera Gel hỗ trợ khả năng tiêu hóa, chức năng miễn dịch và cung cấp các khoáng chất vi lượng và vitamin, 8 axit amin cần thiết, giúp tối ưu hấp thụ dưỡng chất. Đặc biệt còn hỗ trợ điều trị bệnh ung thư.</p>
 							<p>Dung tích : 1 lít</p>
-							<p>Mã số : 015 FLP</p>
+							<p>Mã số : 715 FLP</p>
 						</div>
 						<span class="cta-card">Đọc thêm</span>
 					</div>
@@ -158,27 +179,6 @@
 							<p>Viên dầu cá Forever Arctic-Sea có chức năng duy trì ổn định sự hoạt động của hệ tim mạch, bảo vệ thành mạch củng cố hệ tuần hoàn. Không những thế, nó còn cung cấp những chất cần thiết cho các chức năng khác như tăng cường cho cơ quan não, mắt, hỗ trợ cho chức năng xương khớp.</p>
 							<p>Lọ : 120 Viên</p>
 							<p>Mã số : 376 FLP</p>
-						</div>
-						<span class="cta-card">Đọc thêm</span>
-					</div>
-				</a>
-
-			</div>
-		</div>
-
-		<div class="row row-big-card">
-			<div class="cont borderradius">
-				<a href="#" class="card-link">
-					<div class="card-img">
-						<img src="images/264.png" alt="pr-sample15"/>
-					</div>
-					<div class="card-inner">
-						<h3>Forever Active HA</h3>
-						<h4>Chống và phục hồi thoái hóa xương khớp 264</h4>
-						<div class="inner-text">
-							<p>Dùng cho những người có bệnh về khớp, bị khô chất nhầy trong ổ khớp, viêm khớp, người mắc bệnh gout. Không những thế, những người hay vận động, chơi thể thao nhiều cũng nên sử dụng sản phẩm này để bổ sung các vi chất dinh dưỡng từ thảo mộc cho cơ thể, giúp xương khớp hoạt động tốt nhất.</p>
-							<p>Lọ : 60 Viên</p>
-							<p>Mã số : 264 FLP</p>
 						</div>
 						<span class="cta-card">Đọc thêm</span>
 					</div>
@@ -258,17 +258,14 @@
 
 
 	<script type="text/javascript">
-		var mybutton = document.getElementById("topBtn");
-
-		window.onscroll = function() {scrollFunction()};
-
-		function scrollFunction() {
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				mybutton.style.display = "block";
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 50 ) {
+				$('.scrolltop:hidden').stop(true, true).fadeIn();
 			} else {
-				mybutton.style.display = "none";
+				$('.scrolltop').stop(true, true).fadeOut();
 			}
-		}
+		});
+		$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset().top},"1000");return false})})
 	</script>
 
 	
@@ -313,12 +310,12 @@
 			</div>
 
 		</div>
+	</footer>
+	<footer>
 		<div class="row_u">
 			<div class="mini-footer_u">Copyright © 2021: <a href="index.html">KTYT</a></div>
-
 		</div>
 	</footer>
-
 
 
 </body>

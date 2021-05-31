@@ -14,7 +14,7 @@
 	<script src="../Bootstrap/all.js" data-auto-replace-svg="nest"></script>
 </head>
 <body>
-
+	<div class='thetop'></div>
 	<div class="container topp">
 		<div class="row">
 			<div class="col-lg-5">
@@ -116,9 +116,9 @@
 	</div>
 
 
-	<button onclick="topFunction()" id="topBtn" title="Go to top">
-		<img src="../images/backtop.png">
-	</button>
+	<div class="scrolltop">
+		<div class="scroll icon"><i class="fa fa-2x fa-angle-up"></i></div>
+	</div>
 
 
 	<div id="mySidenav">
@@ -134,16 +134,16 @@
 		<br><h4><b>2. Mô tả</b></h4>
 		<p>
 			<b>Cách nhận biết ngoài tự nhiên:</b>
-			 Đông trùng hạ thảo là một dạng cộng sinh giữa một loài nấm túi có tên khoa học là Cordyceps sinensis (Berk.) Sacc với sâu non (ấu trùng) của một loài côn trùng thuộc chi Hepialus. Thường gặp nhất là sâu non của loài Hepialus armoricanus. Ngoài ra còn 40 loài khác thuộc chi Hepialus cũng có thể bị Cordyceps sinensis ký sinh..
+			Đông trùng hạ thảo là một dạng cộng sinh giữa một loài nấm túi có tên khoa học là Cordyceps sinensis (Berk.) Sacc với sâu non (ấu trùng) của một loài côn trùng thuộc chi Hepialus. Thường gặp nhất là sâu non của loài Hepialus armoricanus. Ngoài ra còn 40 loài khác thuộc chi Hepialus cũng có thể bị Cordyceps sinensis ký sinh..
 		</p>
 		<center><img src="../images/dong-trung-ha-thao.jpg" style="width: 500px"><br><br></center>
 		<p>
 			<b>Phân loại:</b>
-			 Chi nấm Cordyceps có tới 350 loài khác nhau, chỉ riêng ở Trung Quốc đã tìm thấy 60 loài. Tuy nhiên cho đến nay người ta mới chỉ nghiên cứu nhiều nhất được về 2 loài Cordyceps sinensis (Berk.) Sacc. và Cordyceps militaris (L. ex Fr.) Link. Loài thứ hai được gọi là Nhộng trùng thảo
+			Chi nấm Cordyceps có tới 350 loài khác nhau, chỉ riêng ở Trung Quốc đã tìm thấy 60 loài. Tuy nhiên cho đến nay người ta mới chỉ nghiên cứu nhiều nhất được về 2 loài Cordyceps sinensis (Berk.) Sacc. và Cordyceps militaris (L. ex Fr.) Link. Loài thứ hai được gọi là Nhộng trùng thảo
 		</p>
 		<p>
 			<b>Thu hoạch: </b>
-			 Vào mùa đông nấm bắt đầu ký sinh vào sâu non và làm chết sâu non vì ăn hết chất dinh dưỡng của chúng. Mùa hè ấm áp nấm bắt đầu mọc ra khỏi sâu như một ngọn cỏ và vươn lên khỏi mặt đất. Đầu của ngọn nấm là một thể đệm (stroma) hình trụ thuôn nhọn. Chỉ phát hiện được ĐTHT vào mùa hè ở một số cao nguyên cao hơn mặt biển từ 3500 đến 5000m
+			Vào mùa đông nấm bắt đầu ký sinh vào sâu non và làm chết sâu non vì ăn hết chất dinh dưỡng của chúng. Mùa hè ấm áp nấm bắt đầu mọc ra khỏi sâu như một ngọn cỏ và vươn lên khỏi mặt đất. Đầu của ngọn nấm là một thể đệm (stroma) hình trụ thuôn nhọn. Chỉ phát hiện được ĐTHT vào mùa hè ở một số cao nguyên cao hơn mặt biển từ 3500 đến 5000m
 		</p>
 		<p>
 			<b>Vùng trồng, cách trồng:</b>
@@ -192,17 +192,14 @@
 
 
 	<script type="text/javascript">
-		var mybutton = document.getElementById("topBtn");
-
-		window.onscroll = function() {scrollFunction()};
-
-		function scrollFunction() {
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				mybutton.style.display = "block";
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 50 ) {
+				$('.scrolltop:hidden').stop(true, true).fadeIn();
 			} else {
-				mybutton.style.display = "none";
+				$('.scrolltop').stop(true, true).fadeOut();
 			}
-		}
+		});
+		$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset().top},"1000");return false})})
 	</script>
 
 
@@ -247,10 +244,11 @@
 			</div>
 
 		</div>
+	</footer>
+	<footer>
 		<div class="row_u">
 			<div class="mini-footer_u">Copyright © 2021: <a href="index.html">KTYT</a></div>
 		</div>
 	</footer>
-
 </body>
 </html>
